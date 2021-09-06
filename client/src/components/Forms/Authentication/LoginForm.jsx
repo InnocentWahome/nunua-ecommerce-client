@@ -1,47 +1,38 @@
-import React from "react"
+import React from 'react';
+import { Form, Select, Button } from 'antd';
 
-const ContactForm = () => {
-  return (
-    <form>
-      <div class="field is-horizontal">
-        <div class="field-body">
-          <div class="field">
-            <p class="control is-expanded">
-              <input class="input" type="text" placeholder="Name" />
-            </p>
-          </div>
-          <div class="field">
-            <p class="control is-expanded">
-              <input class="input" type="email" placeholder="Email" />
-            </p>
-          </div>
-        </div>
-      </div>
+const makes = [{
+  label: 'Option',
+  value: 'option',
+}]
 
-      <div class="field is-horizontal">
-        <div class="field-body">
-          <div class="field">
-            <p class="control is-expanded">
-              <input class="input" type="text" placeholder="Company" />
-            </p>
-          </div>
-          <div class="field">
-            <p class="control is-expanded">
-              <input class="input" type="text" placeholder="Phone number" />
-            </p>
-          </div>
-        </div>
-      </div>
+const models = [{
+  label: 'Option',
+  value: 'option',
+}]
 
-      <div className="field">
-        <textarea placeholder="How can we help?" className="textarea"></textarea>
-      </div>
+const LoginForm = () => (
+  <Form layout={"vertical"} autoComplete="off">
+    <Form.Item
+      name="make"
+      label="Make"
+      rules={[{ required: true, message: 'Missing make' }]}
+    >
+      <Select options={makes} />
+    </Form.Item>
 
-      <div className="field">
-        <button className="button is-black is-rounded" type="submit">Connect with us</button>
-      </div>
-    </form>
-  )
-}
+    <Form.Item
+      name="model"
+      label="Model"
+      rules={[{ required: true, message: 'Missing model' }]}
+    >
+      <Select options={models} />
+    </Form.Item>
 
-export default ContactForm
+    <Form.Item>
+      <Button block type={"primary"}>Search</Button>
+    </Form.Item>
+  </Form>
+);
+
+export default LoginForm;

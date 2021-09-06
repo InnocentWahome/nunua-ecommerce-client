@@ -1,26 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Jumia by Wahome`,
+    author: `Innocent Maina`,
+    siteUrl: `https://www.wahome.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-less`,
-    {
-      resolve: `gatsby-plugin-less`,
-      options: {
-        loaderOptions: {
-          appendData: `@env: ${process.env.NODE_ENV};`,
-        },
-        lessOptions: {
-          javascriptEnabled: true,
-        },
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -39,12 +25,26 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/logo.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/blog.svg`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-antd",
+      options: {
+        style: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-less`,
+      options: {
+        loaderOptions: {
+          appendData: `@env: ${process.env.NODE_ENV};`,
+        },
+        lessOptions: {
+          javascriptEnabled: true,
+        },
       },
     },
     `gatsby-plugin-gatsby-cloud`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 };

@@ -1,7 +1,5 @@
-import AuthLayout from "./AuthLayout"
-import PageLayout from "./PageLayout"
+import AuthenticationLayout from "./AuthenticationLayout";
+import LandingPageLayout from "./LandingPageLayout";
+import ProductPageLayout from "./ProductPageLayout";
 
-export {
-  AuthLayout,
-  PageLayout
-};
+export { AuthenticationLayout, LandingPageLayout, ProductPageLayout };
