@@ -1,11 +1,10 @@
 import React from "react";
 import { Layout, Breadcrumb } from "antd";
 
-import {Navbar, CustomFooter, Sidebar} from "../components";
-
+import { Navbar, CustomFooter, ProductSidebar } from "../components";
 
 const { Header, Content, Footer, Sider } = Layout;
-const LandingPageLayout = ({ children }) => {
+const ProductPageLayout = ({ children }) => {
   return (
     <div>
       <Layout>
@@ -23,7 +22,7 @@ const LandingPageLayout = ({ children }) => {
             style={{ padding: "24px 0" }}
           >
             <Sider className="site-layout-background" width={200}>
-              <Sidebar />
+              <ProductSidebar />
             </Sider>
             <Content style={{ padding: "0 24px", minHeight: 280 }}>
               {children}
@@ -38,4 +37,4 @@ const LandingPageLayout = ({ children }) => {
   );
 };
 
-export default LandingPageLayout;
+export default ProductPageLayout;

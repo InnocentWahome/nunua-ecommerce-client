@@ -1,10 +1,10 @@
 import * as React from "react";
-import { LandingPageLayout } from "../layouts";
+import { ProductPageLayout } from "../layouts";
 
 const IndexPage = () => (
-  <LandingPageLayout>
+  <ProductPageLayout>
     <h1>This is the about us page </h1>
-  </LandingPageLayout>
+  </ProductPageLayout>
 );
 
 export default IndexPage;

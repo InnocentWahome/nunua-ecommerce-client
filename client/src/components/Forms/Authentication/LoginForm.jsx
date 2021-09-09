@@ -1,38 +1,62 @@
-import React from 'react';
-import { Form, Select, Button } from 'antd';
+import React from "react";
+import { Form, Row, Col, Button, Input, Checkbox } from "antd";
 
-const makes = [{
-  label: 'Option',
-  value: 'option',
-}]
+const onFinish = (values) => {
+  console.log("Success:", values);
+};
 
-const models = [{
-  label: 'Option',
-  value: 'option',
-}]
+const onFinishFailed = (errorInfo) => {
+  console.log("Failed:", errorInfo);
+};
 
 const LoginForm = () => (
-  <Form layout={"vertical"} autoComplete="off">
-    <Form.Item
-      name="make"
-      label="Make"
-      rules={[{ required: true, message: 'Missing make' }]}
-    >
-      <Select options={makes} />
-    </Form.Item>
+  <div>
+    <Row>
+      <Col span={8}></Col>
+      <Col span={8}>
+        <Form
+          name="basic"
+          labelCol={{ span: 8 }}
+          wrapperCol={{ span: 16 }}
+          initialValues={{ remember: true }}
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+          autoComplete="off"
+        >
+          <Form.Item
+            label="Username"
+            name="username"
+            rules={[{ required: true, message: "Please input your username!" }]}
+          >
+            <Input />
+          </Form.Item>
 
-    <Form.Item
-      name="model"
-      label="Model"
-      rules={[{ required: true, message: 'Missing model' }]}
-    >
-      <Select options={models} />
-    </Form.Item>
+          <Form.Item
+            label="Password"
+            name="password"
+            rules={[{ required: true, message: "Please input your password!" }]}
+          >
+            <Input.Password />
+          </Form.Item>
 
-    <Form.Item>
-      <Button block type={"primary"}>Search</Button>
-    </Form.Item>
-  </Form>
+          <Form.Item
+            name="remember"
+            valuePropName="checked"
+            wrapperCol={{ offset: 8, span: 16 }}
+          >
+            <Checkbox>Remember me</Checkbox>
+          </Form.Item>
+
+          <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+            <Button type="primary" htmlType="submit">
+              Submit
+            </Button>
+          </Form.Item>
+        </Form>
+      </Col>
+      <Col span={8}></Col>
+    </Row>
+  </div>
 );
 
 export default LoginForm;
