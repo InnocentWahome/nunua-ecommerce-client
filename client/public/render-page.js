@@ -11463,24 +11463,24 @@ module.exports = withSideEffect;
 /***/ }),
 
 /***/ "react-dom/server":
-/*!*******************************************************************************************************!*\
-  !*** external "/home/guruwalker/sandbox/Personal/Jumia-mock/client/node_modules/react-dom/server.js" ***!
-  \*******************************************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** external "/home/guruwalker/sandbox/nunua-ecommerce/client/node_modules/react-dom/server.js" ***!
+  \***************************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/home/guruwalker/sandbox/Personal/Jumia-mock/client/node_modules/react-dom/server.js");
+module.exports = require("/home/guruwalker/sandbox/nunua-ecommerce/client/node_modules/react-dom/server.js");
 
 /***/ }),
 
 /***/ "react":
-/*!**************************************************************************************************!*\
-  !*** external "/home/guruwalker/sandbox/Personal/Jumia-mock/client/node_modules/react/index.js" ***!
-  \**************************************************************************************************/
+/*!**********************************************************************************************!*\
+  !*** external "/home/guruwalker/sandbox/nunua-ecommerce/client/node_modules/react/index.js" ***!
+  \**********************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/home/guruwalker/sandbox/Personal/Jumia-mock/client/node_modules/react/index.js");
+module.exports = require("/home/guruwalker/sandbox/nunua-ecommerce/client/node_modules/react/index.js");
 
 /***/ }),
 
